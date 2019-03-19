@@ -4,7 +4,7 @@ title:  "Правила игры в кости"
 date:   2019-02-25 14:34:25
 categories: casino
 tags: online
-image: /assets/images/1.JPG
+image: /assets/images/1.jpg
 ---
 
 # Правила игры в кости
