@@ -1,96 +1,81 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
+<div class="post">
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="post__header section-padding--double">
+      <div class="grid-small">
+        <h2 itemprop="name headline">{{ page.title }}</h2>
 
-<!-- Begin Article
-================================================== -->
+        <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b %Y" }}</time>
+      </div>
+    </div>
 
-	<div class="row">
+    {% if page.image %}
+      <div class="post__img">
+        <div>
+          <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
+        </div>
+      </div>
+    {% endif %}
 
-		<!-- Post -->        
-        {% assign author = site.authors[page.author] %}
-        
-		<div class="col-sm-8">
-			<div class="mainheading">              
-                
-                <!-- Post Categories -->
-                <div class="after-post-tags">
-                    <ul class="tags">
-                        {% assign sortedCategories = page.categories | sort %}
-                        {% for category in sortedCategories %}
-                        <li>
-                         <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!-- End Categories -->
-                
-                <!-- Post Title -->
-				<h1 class="posttitle">{{ page.title }}</h1> 
-                
-			</div>
+    <div class="post__content section-padding">
+      <div class="grid">
+        <div id="markdown" itemprop="articleBody">
+          {{content}}
+        </div>
 
-			<!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
-			<!-- End Featured Image -->
+        {% include share.html %}
+      </div>
+    </div>
 
-			<!-- Post Content -->
-			<div class="article-post">
-				{{content}}
-                <div class="clearfix"></div>
-			</div>
+    <!-- Everything inside the #author tags pulls data from the author -->
+    {% if page.author %}
+      <div class="section-padding--none">
+        <div class="grid">
+          <hr class="sep"/>
+        </div>
+      </div>
 
-            <!-- Post Date -->
-            <p>
-            <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                {% endif %}
-                </small>
-            </p>
-            
-			
-            
-            <!-- Prev/Next -->
-            <div class="row PageNavigation mt-4 prevnextlinks">
-              {% if page.previous.url %}
-                <div class="col-md-6 rightborder pl-0">
-                    <a class="thepostlink" href="{{page.previous.url | absolute_url}}">&laquo; {{page.previous.title}}</a>
-                </div>
+      <div class="section-padding">
+        <div class="grid-small">
+          {% for author in site.author %}
+            <span class="post__author">Posted by {% if author["name"] == page.author and author["url"] %}<a href="{{ author['url'] }}" title="More By {{ page.author }}">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}</span>
+            {% if author["name"] == page.author %}
+              <p class="post__bio">{{ author["bio"] }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% include disqus.html %}
+
+  </article>
+</div>
+
+<!-- Links to Previous/Next posts -->
+{% assign relatedTag = page.tags | first %}
+{% if relatedTag %}
+  <section class="related section-padding">
+    <div class="grid-xlarge">
+      <h2 class="related__title">Related</h2>
+      <div class="related__container">
+        {% for post in site.tags[relatedTag] limit: 3 %}
+          <article class="related__post">
+            <a class="related__link" href="{{ post.url | absolute_url }}">
+              {% if post.image %}
+                <figure class="related__img">
+                  <img src="{{ post.image }}" alt="{{ post.title }}"/>
+                </figure>
               {% endif %}
-              {% if page.next.url %}
-                <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="{{page.next.url | absolute_url}}">{{page.next.title}} &raquo;</a>
-                </div>
-              {% endif %}
-            </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                {% if page.author %}				
-				<div class="row post-top-meta">
-					<div class="col-md-2">
-						<img class="author-thumb" src="#" alt="{{ author.display_name }}">
-					</div>
-					<div class="col-md-10">
-						<a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Подписатся</a>
-						<span class="author-description">{{ author.description }}</span>						
-					</div>
-				</div>				
-                {% endif %}
-
-		</div>
-		<!-- End Post -->
-        
-        
-
-	</div>
-
-<!-- End Article
-================================================== -->
+              <div>
+                <h2 class="related__text">{{ post.title }}</h2>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
