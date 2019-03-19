@@ -1,39 +1,26 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2014-08-29 14:34:25
-categories: jekyll update
-tags: featured
-image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.JPG
+date:   2019-02-25 14:34:25
+categories: casino
+tags: online
+image: /assets/images/1.JPG
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+# Правила игры в кости
 
-Jekyll also offers powerful support for code snippets:
+Кости – это старинная игра, которая стала очень популярной в казино. Во время игры пользуются одним или несколькими игральными кубиками. Во время игры выигрывает тот. У кого выпадет больше очков. Данная игра не пользуется особой популярностью в казино, но своего игрока она смогла найти. 
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+## Цель игры
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Основная цель заключается в попытках игрока отгадать суму чисел, которая выпадет после броска. Только есть специальные правила, в которых прописано, что бросок кубиков должен проходить в соответствии с ними, кидать как попало запрещено.  В онлайн –казино и игрок не видит дилера и боксмэна.
 
-{% highlight js %}
+После броска костей, игрок должен попытаться отгадать комбинацию, которая должна выпасть.  На игровом поле представлена вся нужная информация для игры. Выпасть может любое число с 2 до 12. Если после первого броска выпала сумма от 4 до 10, то начинается следующий этап игры. А если выпадет сумма в 2, 3 или 12 очков, то игрок проигрывает, таким образом кости предаются следующему игроку. Если выпало число 7 или 11, игрок побеждает и может вновь делать ход. В кости есть огромно разнообразие ставок. При разных ставках сумма выигрыша, соответственно тоже будет разной. 
+Советы во время игры в кости
 
-<footer class="site-footer">
- <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-  <div class="inner">a
-   <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-   <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  </div>
-</footer>
-{% endhighlight %}
+Всем новичкам советуют играть очень осторожно. Перед началом игры, нужно очень детально изучить правила игры. Стратегия игры заключается в том, что нужно просто получать удовольствие от процесса, только при этом не терять голову. Е нужно пытаться использовать разные схемы или делать попытки все просчитать математическим путем. Все э то глупо. Которыми часто пользуются мошенники, которые мечтают заработать на вас. Часто они пытаются вам разные стратегии для победы.
 
+Если углубится в суть, то играя в кости тоже в каком – то смысле нужно полностью полагаться на удачу. Несомненно, вы можете предугадывать комбинации, которые могут выпасть. В начале это может плохо получатся, но по истечению времени вы сможете всему научится. Самое главное действовать по степенно, а не спешить, и детально продумывать все свои действия. 
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+А если вы хотите просто поиграть и не собираетесь выигрывать огромные деньги, то можете не переживать. Еще очень важно уметь вовремя остановится, если вы смогли выиграть достаточно денег, то лучше прийти в следующий раз, чтобы не проиграть все за один вечер. Помните, если вы знаете, что не сможете вовремя останавливаться, то лучше вообще не начинать игру. 
+

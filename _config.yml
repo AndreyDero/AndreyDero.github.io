@@ -4,9 +4,9 @@ gems:
   - jekyll-paginate
 
 # Site settings
-title: "Mediator"
+title: "Онлайн казино - и все о зароботке"
 description: > # this means to ignore newlines until "email:"
-   A Jekyll theme - Medium inspired
+   Больше не хочешь быть на мили? Тогда ты попал куда надо! Здесь ты узнаешь как поднять бабла на онлайн казино
 
 #blog logo
 logo: "/assets/images/df_logo.jpg"
@@ -21,8 +21,8 @@ author_image: "/assets/images/author.jpg"
 
 paginate:	5
 
-url: "http://myblog.***.***" # the base hostname & protocol for your site
-baseurl: ""
+url: "http://strategywebsolutions.com" # the base hostname & protocol for your site
+baseurl: "/"
 #used to display twitter cards
 
 
