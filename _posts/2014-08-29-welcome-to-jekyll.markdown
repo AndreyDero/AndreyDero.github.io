@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Правила игры в кости"
 date:   2019-02-25 14:34:25
 categories: casino
 tags: online
