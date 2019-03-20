@@ -4,7 +4,7 @@ title:  "Типы игровых автоматов"
 date:   2019-03-03 14:34:25
 categories: casino
 tags: online
-image: /assets/images/7.jpg
+image: /assets/images/8.jpg
 ---
 
 # Типы игровых автоматов по количеству барабанов
